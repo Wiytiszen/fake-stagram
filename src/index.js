@@ -1,13 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import './index.css';
-import App from './App';
+import Main from './components/Main';
+import Header from './components/Header';
+import PhotoGrid from "./components/PhotoGrid";
+import Single from "./components/Single";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+render((
+  <Router>
+    <Link to={"/"}><Header /></Link>
+    
+     <Switch>
+          <Route exact path="/" component={Main}/>
+          <Route path="/grid/:photoId" component={Single}/>
+      </Switch>
+  </Router>
+),
   document.getElementById('root')
 );
 
