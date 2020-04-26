@@ -18,6 +18,12 @@ const Photo = (props) => {
         <p>{props.post.caption}</p>
         <div className="control-buttons">
             <button onClick={()=> props.handleLike( props.i)} className="likes">&hearts;{props.post.likes}</button>
+            <Link className="button" to={`/view/${props.post.code}`}>
+              <span className="comment-count">
+                <span> Comments </span>
+                {props.comments[props.post.code] ? props.comments[props.post.code].length : 0 }
+              </span>
+            </Link>
           </div>
       </figcaption>
     </figure>
