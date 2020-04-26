@@ -1,19 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import posts from "../postExamples";
+import Photo from "./Photo";
 
-function PhotoGrid() {
-  return (
-    <div>
-      <h3>This is the grid</h3>
-      <ul>
-        {/* {posts.map(item => (
-          // <li> <Link to="/grid/:photoId"><img width="50px" src={`${item.display_src}`}/></Link></li>
-        ))} */}
-        <li> <Link to="/grid/:photoId">pic</Link></li>
-      </ul>
-    </div>
-  );
-}
+const PhotoGrid =(props) =>(
+  <div className="grid">
+  {props.posts.map((post, i) => <Photo key={i} i={i} post={post} />)}
+  </div>
+  )
 
 export default PhotoGrid;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = ()=>(  
-   <h1>Fake-stagram </h1>
+   <h1 className ="header">Fake-stagram</h1>
 );
 
 export default Header;

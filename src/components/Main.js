@@ -1,17 +1,28 @@
-import React,{Component} from "react";
+import React from "react";
 import PhotoGrid from "./PhotoGrid";
+import { connect } from 'react-redux'
 
 
-class Main extends Component {
-  state = {};
-  render() {
+
+
+const Main = (props)=> {    
     return (
       <div>
-        <p>Take a look to my photos!!!</p>
-      <PhotoGrid/>
+        <PhotoGrid {...props}/>
       </div>
+      
     );
   }
-}
 
-export default Main;
+  function mapStateToProps(state) {
+    return {
+      posts: state.posts,
+      comments: state.comments
+    }
+  }
+  
+  
+export default connect(
+  mapStateToProps,
+  null
+)(Main);
