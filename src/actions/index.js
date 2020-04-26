@@ -9,4 +9,9 @@ export const addComment =(photoId, user, text)=> ({
   user,
   text
  });
+export const delComment =(photoId,i)=> ({
+  type: 'DEL_COM',// <== this is the most important  
+  photoId,
+  i
+ });
 
