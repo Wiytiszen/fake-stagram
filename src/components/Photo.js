@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import addLike from "../actions/index";
+import {addLike} from "../actions/index";
 import { connect } from 'react-redux'
 
 const Photo = (props) => {

@@ -7,12 +7,12 @@ function Single(props) {
   const indexPost = props.posts.findIndex(
     (post) => post.code === props.match.params.photoId
   );
-  const comments = props.comments[props.match.params.photoId] || [];
+ 
   const post = props.posts[indexPost];
   return (
     <div className="single-photo">
       <Photo i={indexPost} post={post} />
-      <Comments comments={comments} />
+      <Comments photoId={props.match.params.photoId}/>
     </div>
   );
 }
