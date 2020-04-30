@@ -31,6 +31,10 @@ ol, ul {
   font-family: 'Poppins', sans-serif;
   color: #976EF5;
   font-size: 4rem;
+  background: -webkit-linear-gradient( #585DDF,#FF634D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   }
 .grid{
   display: flex;
