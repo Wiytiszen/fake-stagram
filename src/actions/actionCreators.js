@@ -1,17 +1,16 @@
 //functions that create actions
 export const addLike = (code) => ({
-  type: 'ADD_LIKE',// <== this is the most important  
-  code
- });
-export const addComment =(photoId, user, text)=> ({
-  type: 'ADD_COM',// <== this is the most important  
+  type: "ADD_LIKE", // <== this is the most important
+  code,
+});
+export const addComment = (photoId, user, text) => ({
+  type: "ADD_COM", // <== this is the most important
   photoId,
   user,
-  text
- });
-export const delComment =(photoId,i)=> ({
-  type: 'DEL_COM',// <== this is the most important  
+  text,
+});
+export const delComment = (photoId, i) => ({
+  type: "DEL_COM", // <== this is the most important
   photoId,
-  i
- });
-
+  i,
+});

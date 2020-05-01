@@ -5,19 +5,23 @@ const rootReducer = (state, action) => {
       const posts = [...state.posts];
       posts[i].likes++;
       return { ...state, posts };
-    case "ADD_COM":{
+    case "ADD_COM": {
       const comments = { ...state.comments };
-      if(!comments[action.photoId]){
-        comments[action.photoId]=[];
+      if (!comments[action.photoId]) {
+        comments[action.photoId] = [];
       }
       comments[action.photoId].push({ user: action.user, text: action.text });
       return { ...state, comments };
-      }
-    case "DEL_COM":{
+    }
+    case "DEL_COM": {
       const allComments = { ...state.comments };
-      const comments = [ ...state.comments[action.photoId]].filter((value,index) => {return (index!==action.i)})
-      allComments[action.photoId]=comments;
-      return {...state,comments:allComments};
+      const comments = [...state.comments[action.photoId]].filter(
+        (value, index) => {
+          return index !== action.i;
+        }
+      );
+      allComments[action.photoId] = comments;
+      return { ...state, comments: allComments };
     }
     default:
       return state;

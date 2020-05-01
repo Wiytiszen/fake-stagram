@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import Header from "./components/Header";
 import PhotoGrid from "./components/PhotoGrid";
 import Single from "./components/Single";
+import NotFound from "./components/NotFound";
 import "./styles/style.css";
 
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
@@ -24,6 +25,7 @@ const router = (
           <Switch>
             <Route  exact path="/" component={PhotoGrid} />
             <Route  exact path="/view/:photoId" component={Single} />
+            <Route   component={NotFound} />
           </Switch>
     </Router>
   </Provider>

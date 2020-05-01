@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
+import { Link } from "react-router-dom";
 
 const Photo = (props) => {
   return (
@@ -15,19 +16,27 @@ const Photo = (props) => {
       <figcaption>
         <p>{props.post.caption}</p>
         <div className="control-buttons">
-            <button onClick={()=> props.addLike( props.i)} className="likes">&hearts;{props.post.likes}</button>
-            <Link className="button" to={`/view/${props.post.code}`}>
-              <span className="comment-count">
-                <span> Comments </span>
-                {props.comments[props.post.code] ? props.comments[props.post.code].length : 0 }
-              </span>
-            </Link>
-          </div>
+          <button onClick={() => props.addLike(props.i)} className="likes">
+            &hearts;{props.post.likes}
+          </button>
+          <Link className="button" to={`/view/${props.post.code}`}>
+            <span className="comment-count">
+              <span> Comments </span>
+              {props.comments[props.post.code]
+                ? props.comments[props.post.code].length
+                : 0}
+            </span>
+          </Link>
+        </div>
       </figcaption>
     </figure>
   );
 };
 
-
+Photo.propTypes = {
+  post: PropTypes.object,
+  addLike: PropTypes.func,
+  comments: PropTypes.object,
+};
 
 export default Photo;
