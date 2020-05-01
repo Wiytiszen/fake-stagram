@@ -1,6 +1,3 @@
-// import  actions
-
-// define the reducer
 const rootReducer = (state, action) => {
   switch (action.type) {
     case "ADD_LIKE":
@@ -9,7 +6,6 @@ const rootReducer = (state, action) => {
       posts[i].likes++;
       return { ...state, posts };
     case "ADD_COM":{
-      // photoId, user, text
       const comments = { ...state.comments };
       if(!comments[action.photoId]){
         comments[action.photoId]=[];
@@ -18,11 +14,10 @@ const rootReducer = (state, action) => {
       return { ...state, comments };
       }
     case "DEL_COM":{
-      // photoId, user, text
-      const Allcomments = { ...state.comments };
+      const allComments = { ...state.comments };
       const comments = [ ...state.comments[action.photoId]].filter((value,index) => {return (index!==action.i)})
-      Allcomments[action.photoId]=comments;
-      return {...state,comments:Allcomments};
+      allComments[action.photoId]=comments;
+      return {...state,comments:allComments};
     }
     default:
       return state;

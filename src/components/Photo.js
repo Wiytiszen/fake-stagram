@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import {addLike} from "../actions/index";
-import { connect } from 'react-redux'
 
 const Photo = (props) => {
   return (
@@ -17,7 +15,7 @@ const Photo = (props) => {
       <figcaption>
         <p>{props.post.caption}</p>
         <div className="control-buttons">
-            <button onClick={()=> props.handleLike( props.i)} className="likes">&hearts;{props.post.likes}</button>
+            <button onClick={()=> props.addLike( props.i)} className="likes">&hearts;{props.post.likes}</button>
             <Link className="button" to={`/view/${props.post.code}`}>
               <span className="comment-count">
                 <span> Comments </span>
@@ -30,17 +28,6 @@ const Photo = (props) => {
   );
 };
 
-function mapStateToProps(state) {
-  return {
-    posts: state.posts,
-    comments: state.comments
-  }
-}
 
-const mapDispatchToProps = (dispatch) =>{
-  return({
-		handleLike: (i) => dispatch(/*action */addLike(i))
-	});
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(Photo);
+export default Photo;

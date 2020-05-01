@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
-import Main from "./components/Main";
 import Header from "./components/Header";
+import PhotoGrid from "./components/PhotoGrid";
 import Single from "./components/Single";
 import "./styles/style.css";
 
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 // 1. adding React-Redux
 // 2. Create a Store.js and import it here
@@ -20,13 +20,11 @@ import * as serviceWorker from "./serviceWorker";
 const router = (
   <Provider store={store}>
     <Router>
-      <Link to="/">
-        <Header />
-      </Link>
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route path="/view/:photoId" component={Single} />
-      </Switch>
+          <Route  path="/" component={Header} />
+          <Switch>
+            <Route  exact path="/" component={PhotoGrid} />
+            <Route  exact path="/view/:photoId" component={Single} />
+          </Switch>
     </Router>
   </Provider>
 );
