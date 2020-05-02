@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fake-stagram/static/css/main.0ca3a67e.chunk.css",
-    "main.js": "/fake-stagram/static/js/main.c2b390a8.chunk.js",
-    "main.js.map": "/fake-stagram/static/js/main.c2b390a8.chunk.js.map",
+    "main.js": "/fake-stagram/static/js/main.726df552.chunk.js",
+    "main.js.map": "/fake-stagram/static/js/main.726df552.chunk.js.map",
     "runtime-main.js": "/fake-stagram/static/js/runtime-main.aa500259.js",
     "runtime-main.js.map": "/fake-stagram/static/js/runtime-main.aa500259.js.map",
     "static/js/2.7715161c.chunk.js": "/fake-stagram/static/js/2.7715161c.chunk.js",
     "static/js/2.7715161c.chunk.js.map": "/fake-stagram/static/js/2.7715161c.chunk.js.map",
     "index.html": "/fake-stagram/index.html",
-    "precache-manifest.8618bfce272b093094ae9ebebf5ef63e.js": "/fake-stagram/precache-manifest.8618bfce272b093094ae9ebebf5ef63e.js",
+    "precache-manifest.322775aa69af58f66c1d9e87803aa7ae.js": "/fake-stagram/precache-manifest.322775aa69af58f66c1d9e87803aa7ae.js",
     "service-worker.js": "/fake-stagram/service-worker.js",
     "static/css/main.0ca3a67e.chunk.css.map": "/fake-stagram/static/css/main.0ca3a67e.chunk.css.map",
     "static/js/2.7715161c.chunk.js.LICENSE.txt": "/fake-stagram/static/js/2.7715161c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.aa500259.js",
     "static/js/2.7715161c.chunk.js",
     "static/css/main.0ca3a67e.chunk.css",
-    "static/js/main.c2b390a8.chunk.js"
+    "static/js/main.726df552.chunk.js"
   ]
 }

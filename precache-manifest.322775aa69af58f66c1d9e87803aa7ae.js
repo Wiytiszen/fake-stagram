@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d10284d22b31491f2094fb98d5fcc23",
+    "revision": "7cec3a31fb9fca4afb6025b3e2f9497d",
     "url": "/fake-stagram/index.html"
   },
   {
-    "revision": "77ef519a6f185a86b6cf",
+    "revision": "8606e6345a584de5c0ff",
     "url": "/fake-stagram/static/css/main.0ca3a67e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fake-stagram/static/js/2.7715161c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "77ef519a6f185a86b6cf",
-    "url": "/fake-stagram/static/js/main.c2b390a8.chunk.js"
+    "revision": "8606e6345a584de5c0ff",
+    "url": "/fake-stagram/static/js/main.726df552.chunk.js"
   },
   {
     "revision": "9bbcb0665e715c5ba961",
