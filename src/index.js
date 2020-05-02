@@ -25,7 +25,7 @@ const router = (
           <Switch>
             <Route  exact path="/" component={PhotoGrid} />
             <Route  exact path="/view/:photoId" component={Single} />
-            <Route   component={NotFound} />
+            <Route  path="*" component={NotFound} />
           </Switch>
     </Router>
   </Provider>
