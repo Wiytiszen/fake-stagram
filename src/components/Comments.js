@@ -15,18 +15,18 @@ const Comments = (props) => {
     <div>
       {comments.map((com, i) => {
         return (
-          <div className="delete-Comment" key={i}>
+          <div className="comment" key={i}>
             <p>
               <strong>{com.user}</strong>- {com.text}
             </p>
-            <button
+            <span className="delete"
               onClick={() => {
                 props.delComment(props.photoId, i);
               }}
             >
               {" "}
               X{" "}
-            </button>
+            </span>
           </div>
         );
       })}

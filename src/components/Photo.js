@@ -13,7 +13,7 @@ const Photo = (props) => {
           style={{ width: "100%" }}
         />
       </Link>
-      <figcaption>
+      <figcaption className="caption">
         <p>{props.post.caption}</p>
         <div className="control-buttons">
           <button onClick={() => props.addLike(props.i)} className="likes">
