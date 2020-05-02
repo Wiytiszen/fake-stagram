@@ -6,7 +6,7 @@ import Single from "./components/Single";
 import NotFound from "./components/NotFound";
 import "./styles/style.css";
 
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {HashRouter, Route, Switch} from "react-router-dom";
 
 // 1. adding React-Redux
 // 2. Create a Store.js and import it here
@@ -20,14 +20,14 @@ import * as serviceWorker from "./serviceWorker";
 
 const router = (
   <Provider store={store}>
-    <Router>
+    <HashRouter basename="/">
           <Route  path="/" component={Header} />
           <Switch>
             <Route  exact path="/" component={PhotoGrid} />
             <Route  exact path="/view/:photoId" component={Single} />
             <Route  path="*" component={NotFound} />
           </Switch>
-    </Router>
+    </HashRouter>
   </Provider>
 );
 render(router, document.getElementById("root"));
